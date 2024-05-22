@@ -1,6 +1,7 @@
+
 const HomePage = () => {
   return(
-    <div>HomePge</div>
+    <div className=''>HomePge</div>
   )
 }
 
