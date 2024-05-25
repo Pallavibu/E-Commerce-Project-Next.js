@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Menu from "./Menu";
 import Image from "next/image";
+import SearchBar from "./SearchBar"
 
 const Navbar = () => {
   return (
@@ -22,7 +23,9 @@ const Navbar = () => {
           </Link>
         </div>
         {/*RIGHT*/}
-        <div className="w-2/3"></div>
+        <div className="w-2/3">
+         <SearchBar/>
+        </div>
       </div>
     </div>
   );
