@@ -19,6 +19,17 @@ const CartModal = () => {
           />
           <div className="">
             {/*TOP*/}
+            <div className="">
+              {/*TITLE*/}
+              <div className="">
+                <h3>Product Name</h3>
+                <div className="">$49</div>
+              </div>
+              {/*DESCRIPTION*/}
+              <div className="">available</div>
+            </div>
+
+          
             {/*BOTTOM*/}
           </div>
         </div>
