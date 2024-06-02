@@ -9,7 +9,7 @@ const slides = [
     id: 1,
     title: "Summer Sale Collection",
     description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/23947602/pexels-photo-23947602/free-photo-of-a-woman-sitting-in-a-field-with-a-camera.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    img : "https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=600",
     url: "/",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
@@ -17,7 +17,7 @@ const slides = [
     id: 2,
     title: "Winter Sale Collection",
     description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/25184945/pexels-photo-25184945/free-photo-of-fashion-eastern-dresses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=600",
     url: "/",
     bg: "bg-gradient-to-r from-pink-50 to-blue-50",
   },
@@ -25,7 +25,7 @@ const slides = [
     id: 3,
     title: "Spring Sale Collection",
     description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/25184945/pexels-photo-25184945/free-photo-of-fashion-eastern-dresses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=600",
     url: "/",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
@@ -35,7 +35,7 @@ const Slider = () => {
   const [current, setCurrent] = useState(0);
 
   return (
-    <div className="h-[100vh-(80px)] overflow-hidden">
+    <div className="h-[calc(100vh-80px)] overflow-hidden">
       <div className="w-max h-full flex transition-all ease-in-out duration-1000">
         {slides.map((slide) => (
           <div
@@ -44,8 +44,8 @@ const Slider = () => {
           >
             {/*TEXT CONTAINER*/}
             <div className="h-1/2 xl:w-1/2">
-              <h2>{slide.description}</h2>
-              <h1>{slide.title}</h1>
+              <h2 className="text-xl lg:text-3xl 2xl:text-5xl">{slide.description}</h2>
+              <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">{slide.title}</h1>
               <Link href={slide.url}>
                 <button>SHOP NOW</button>
               </Link>
