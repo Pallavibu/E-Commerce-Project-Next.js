@@ -1,7 +1,12 @@
 const SinglePage = () => {
-return(
-    <div>SinglePage</div>
-)
-}
+  return (
+    <div>
+      {/* IMG */}
+      <div className=""></div>
+      {/* TEXTS */}
+      <div className=""></div>
+    </div>
+  );
+};
 
 export default SinglePage;
