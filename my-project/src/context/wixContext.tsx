@@ -10,7 +10,7 @@ const myWixClient = createClient({
       //currentCart
     },
     auth: OAuthStrategy({
-      clientId: '<YOUR_CLIENT_ID>',
+      clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID!,
       tokens: {
         accessToken: {  
           value: '<ACCESS_TOKEN_VALUE>',
