@@ -1,7 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
+import { wixClientServer } from "@/lib/wixClientServer";
 
-const ProductList = () => {
+const ProductList = async ({
+  categoryId,
+  limit,
+}: {
+  categoryId: string;
+  limit?: number;
+}) => {
+  const wixClient = await wixClientServer();
+
+  const res = await wixClient.products.queryProducts().find();
+
   return (
     <div className="mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap">
       <Link
@@ -28,7 +39,9 @@ const ProductList = () => {
           <span className="font-semibold">$49</span>
         </div>
         <div className="text-sm text-gray-500">My description</div>
-        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">Add to Cart</button>
+        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">
+          Add to Cart
+        </button>
       </Link>
       <Link
         href="/test"
@@ -54,7 +67,9 @@ const ProductList = () => {
           <span className="font-semibold">$49</span>
         </div>
         <div className="text-sm text-gray-500">My description</div>
-        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">Add to Cart</button>
+        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">
+          Add to Cart
+        </button>
       </Link>
       <Link
         href="/test"
@@ -80,7 +95,9 @@ const ProductList = () => {
           <span className="font-semibold">$49</span>
         </div>
         <div className="text-sm text-gray-500">My description</div>
-        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">Add to Cart</button>
+        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">
+          Add to Cart
+        </button>
       </Link>
       <Link
         href="/test"
@@ -106,9 +123,10 @@ const ProductList = () => {
           <span className="font-semibold">$49</span>
         </div>
         <div className="text-sm text-gray-500">My description</div>
-        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">Add to Cart</button>
+        <button className="rounded-2xl ring-1 ring-[#F35C7A] text-[#f3537A] px-4 py-2 text-sm w-max hover:text-white hover:bg-[#F35C7A]">
+          Add to Cart
+        </button>
       </Link>
-      
     </div>
   );
 };
